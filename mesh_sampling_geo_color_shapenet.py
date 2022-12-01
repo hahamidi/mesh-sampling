@@ -148,6 +148,7 @@ def get_mesh_arrays(input_dir, input_filename, face_matrix_file, face_quality_fi
 def sample_mesh(input_filepath, n, occlusion_threshold, output_dir, current_dir, target_points, resolution, remove_intermediate_files, cloudcompare_bin_path):
 
 	if input_filepath[-4:] != ".obj":
+		print(input_filepath[-4:])
 		raise Exception("Mesh file doesn't have obj extension and couldn't be sampled")
 
 	input_dir, input_filename = os.path.split(input_filepath)
